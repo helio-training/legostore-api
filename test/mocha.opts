@@ -1,5 +1,5 @@
 --require babel-register
---require ./test/_setup.js
+--require ./test/helper.js
 --es_staging
 --recursive
 --reporter min

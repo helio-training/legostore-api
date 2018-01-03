@@ -18,7 +18,7 @@ module.exports = wallaby => ({
 
   setup: () => {
     require('babel-polyfill')
-    require('./test/_setup')
+    require('./test/helper')
   },
 
   compilers: {

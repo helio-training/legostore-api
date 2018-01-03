@@ -1,7 +1,15 @@
+import Server from '../src'
+
 describe(`initial`, () => {
 
-  it(`works`, () => {
-    expect(true).to.be.true()
+  let server
+  before(async () => {
+    server = await Server()
+    expect(server).to.be.true()
   })
 
+  it(`has valid server`, async () => {
+    const {statusCode} = await server.inject('/')
+    expect(statusCode).to.equal(200)
+  })
 })
