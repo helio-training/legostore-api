@@ -7,7 +7,7 @@
 This a good starting point for using babel, mocha, and eslint for coding.
 
 ```bash
-git clone https://github.com/helio-training/node-boilerplate.git [name-of-project]
+git clone https://github.com/helio-training/hapi-boilerplate.git [name-of-project]
 ```
 
 Change the remote origins in git to push your changes to your own repositories.
