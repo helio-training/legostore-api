@@ -4,6 +4,11 @@ import ProductsPlugin from './plugins/products'
 
 const env = process.env.NODE_ENV || 'development'
 const port = process.env.PORT || 5001
+const mongoUri = process.env.MONGO_URI
+
+if(!mongoUri)
+  throw Error('Please set a MONGO_URI environment variable')
+
 
 const defaultPlugins = async (server) => {
   const plugins = [
@@ -60,7 +65,7 @@ const defaultPlugins = async (server) => {
 
 const customPlugins = async server => {
   const plugins = [
-    { plugin: MongoPlugin },
+    { plugin: MongoPlugin, options: { mongoUri } },
     { plugin: ProductsPlugin },
   ]
 
